@@ -5,6 +5,7 @@ export default function Login(){
     const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider()
     const response = await signInWithPopup(auth,provider)  
+    .catch(error => alert(error.message))
     console.log(response?.user)  // optional chaning operator
     }
     return(
